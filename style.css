@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  min-height: 100dvh;
+  background: linear-gradient(
+    120deg,
+    #ff5a1f,  /* 딥 오렌지 */
+    #ff4d8d,  /* 코랄 핑크 */
+    #ff2f92   /* 핫핑크 */
+  );
+  background-size: 300% 300%;
+  animation: tropicalShift 14s linear infinite;
+}
+
+
+/* 그라데이션 움직임 */
+@keyframes tropicalShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 모바일 중앙 카드 */
+.page {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+/* 메인 카드 */
+.card {
+  width: 100%;
+  max-width: 360px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 28px 20px 32px;
+  text-align: center;
+  box-shadow: none; /* ❗ 입체감 제거 */
+}
+
+/* 프로필 */
+.profile {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 14px;
+  border: none; /* ❌ 테두리 제거 */
+}
+
+
+/* 타이틀 */
+h1 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #111;
+}
+
+/* 서브 카피 */
+.bio {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 22px;
+  line-height: 1.4;
+}
+
+/* 링크 버튼 */
+.links a {
+  display: block;
+  padding: 16px;
+  margin-bottom: 14px;
+  background: #000000;
+  border-radius: 60px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  transition: background 0.15s ease;
+}
+
+/* 모바일 탭 피드백 (플랫하게) */
+.links a:active {
+  background: #222222;
+}
+
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 22px;
+}
+
+.social a {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social img.icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+/* 모바일 탭 피드백 */
+.social a:active {
+  opacity: 0.6;
+}
+
+
+.links-label {
+  margin: 18px 0 10px;
+  text-align: center;
+  color: #000;
+}
+
+
+.divider {
+  border: none;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.15);
+  margin: 22px 0 18px;
+}
+
+
+.section-label {
+  margin: 20px 0 12px;
+  text-align: center;
+  font-size: 14px;      /* 동일 */
+  font-weight: 600;     /* 동일 */
+  letter-spacing: 0px;
+  color: #000;
+}
